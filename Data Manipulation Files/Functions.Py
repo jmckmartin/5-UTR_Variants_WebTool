@@ -37,20 +37,15 @@ def Gene_Parse(line, tempvars):
 
     return(tempvars)
 
-tempvars = {
-    "Temp_Transcript_ID" : '',
-    "Temp_Chr" : '',
-    "Temp_Gene_Start_Coord" : '',
-    "Temp_Gene_End_Coord" : '',
-    "Temp_Gene_Strand" : '',
-    "Temp_Gene_ID" : '',
-    "Temp_Gene_Symbol" : '',
-    "Temp_HGNC_Symbol" : '',
-    "Temp_Gene_Description" : '',
-    "Temp_cDNA_Sequence" : ''
-    }
-
-
-Gene_Parse(">ENST00000342066.8 cdna chromosome:GRCh38:1:925731:944574:1 gene:ENSG00000187634.12 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:SAMD11 description:sterile alpha motif domain containing 11 [Source:HGNC Symbol;Acc:HGNC:28706]", tempvars)
-
-print(tempvars)
+def resetvars(vars_dict):
+    vars_dict["Temp_Transcript_ID"] = ''
+    vars_dict["Temp_Chr"] = ''
+    vars_dict["Temp_Gene_Start_Coord"] = ''
+    vars_dict["Temp_Gene_End_Coord"] = ''
+    vars_dict["Temp_Gene_Strand"] = ''
+    vars_dict["Temp_Gene_ID"] = ''
+    vars_dict["Temp_Gene_Symbol"] = ''
+    vars_dict["Temp_HGNC_Symbol"] = ''
+    vars_dict["Temp_Gene_Description"] = ''
+    vars_dict["Temp_cDNA_Sequence"] = ''
+    return(vars_dict)
