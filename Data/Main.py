@@ -4,7 +4,7 @@ import sys
 
 file = "data_files/MANE.GRCh38.v0.91.select_ensembl_rna.fna"
 x = gf.read_MANE(file)
-n = 6
+n = 25
 
 print(x[n].gene_id)
 print(x[n].transcript_id)
